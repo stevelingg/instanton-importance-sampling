@@ -77,13 +77,13 @@ Let $P_\theta$ denote the original stochastic model, with parameters $\theta$, a
 
 The target quantity is
 
-$$
+```math
 p_\theta = P_\theta(A).
-$$
+```
 
 Let $Q$ denote an instanton-guided proposal distribution. The corresponding importance-sampling estimator is
 
-$$
+```math
 \hat p_{\mathrm{IS}}
 =
 \frac{1}{N}
@@ -92,7 +92,7 @@ $$
 \frac{dP_\theta}{dQ}(X^{(i)}),
 \qquad
 X^{(i)} \sim Q.
-$$
+```
 
 Provided the likelihood ratios are correctly specified and the proposal satisfies the necessary support conditions, conventional Monte Carlo and instanton-guided importance sampling estimate the same underlying model probability.
 
@@ -102,7 +102,7 @@ It does not introduce additional information about future market behaviour.
 
 If $p_{\mathrm{true}}$ denotes the unknown real-world event probability, the total estimation error can be decomposed as
 
-$$
+```math
 \hat p_{\mathrm{IS}} - p_{\mathrm{true}}
 =
 \underbrace{
@@ -112,7 +112,7 @@ $$
 \underbrace{
 p_\theta - p_{\mathrm{true}}
 }_{\text{Model error}}.
-$$
+```
 
 Importance sampling addresses the first term by changing how trajectories are generated. It does not resolve the second term, which depends on the suitability of the stochastic model, its estimated parameters, and its ability to represent future market dynamics.
 
@@ -132,19 +132,19 @@ Define the running peak and drawdown on the daily grid by
 
 For a chosen drawdown fraction $\delta \in (0,1)$, define the corresponding log-threshold
 
-$$
+```math
 d(\delta) = -\log(1-\delta).
-$$
+```
 
 Given simulation origin day $k$, current state
 
-$$
+```math
 (X_k,V_k,D_k)=(x_0,v_0,d_0),
-$$
+```
 
 and a horizon of $T_{\text{days}}=n$ trading days, the quantity estimated under the fitted stochastic model is
 
-$$
+```math
 p_k(T_{\text{days}},\delta)
 =
 \mathbb{P}_{\theta}\left(
@@ -155,7 +155,7 @@ X_k=x_0,\;
 V_k=v_0,\;
 D_k=d_0
 \right).
-$$
+```
 
 ### Important modelling convention
 
@@ -167,9 +167,9 @@ Drawdown $D$ is **not** a third stochastic differential equation. It is updated 
 
 Under the event definition above, if
 
-$$
+```math
 d_0 \ge d(\delta),
-$$
+```
 
 then the event is already satisfied at the simulation origin.
 
@@ -242,12 +242,12 @@ Select the lowest-action candidate over $\tau$.
 
 Schematically, the optimisation problem takes the form
 
-$$
+```math
 x^\star
 \approx
 \operatorname*{arg\,min}_{x\in\mathcal{A}}
 S[x],
-$$
+```
 
 where $S[x]$ is the discretised action functional and $\mathcal{A}$ denotes the relevant constrained path space.
 
@@ -299,29 +299,29 @@ Implemented in `src/constants.py`, `src/model_sv.py`, and used throughout optimi
 
 - **Threshold transform:**
 
-  $$
+  ```math
   d(\delta)=-\log(1-\delta).
-  $$
+  ```
 
 - **Drawdown update:** exact running maximum in simulation and evaluation; smooth surrogate only inside the optimiser.
 
 - **Effective variance regularisation:**
 
-  $$
+  ```math
   v_{\text{eff}}
   =
   v_{\min}
   +
   \mathrm{softplus}_{\alpha_v}(v-v_{\min}),
-  $$
+  ```
 
   used in the coefficients, action, and simulation.
 
 - **Importance-sampling control:**
 
-  $$
+  ```math
   u_i=\mathrm{cap}(\lambda u_i^\star),
-  $$
+  ```
 
   with post-hit truncation.
 
@@ -417,7 +417,7 @@ These values are retained from the original numerical demonstration.
 
 Effective sample size (ESS) provides a diagnostic of importance-weight concentration:
 
-$$
+```math
 \mathrm{ESS}
 =
 \frac{
@@ -425,13 +425,13 @@ $$
 }{
 \sum_{i=1}^{N}w_i^2
 },
-$$
+```
 
 where
 
-$$
+```math
 w_i=\frac{dP}{dQ}(X^{(i)}).
-$$
+```
 
 The results show considerable variation in the numerical behaviour of the importance sampler across different event configurations.
 
@@ -449,15 +449,15 @@ No systematic claim of computational superiority over conventional Monte Carlo i
 
 The event definitions imply the following theoretical probability relationships:
 
-$$
+```math
 p_k(60,\delta)\ge p_k(20,\delta),
-$$
+```
 
 and
 
-$$
+```math
 p_k(n,0.20)\ge p_k(n,0.30).
-$$
+```
 
 Longer simulation horizons contain the corresponding shorter-horizon event sets, while milder drawdown thresholds contain the corresponding more extreme events.
 
