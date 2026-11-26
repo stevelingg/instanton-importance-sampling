@@ -91,11 +91,25 @@ def _shade_tau0(
         first = False
 
 
+
 def _savefig(fig: plt.Figure, out_path: Path, spec: PlotSpec) -> None:
     kwargs = {"bbox_inches": "tight"}
     if spec.savefig_kwargs:
         kwargs.update(dict(spec.savefig_kwargs))
+
+    fig.text(
+        0.5,
+        -0.035,
+        "Illustrative numerical experiment — not a validated crash forecast.\n"
+        "Results depend on the event definition and stochastic-model assumptions.",
+        ha="center",
+        va="top",
+        fontsize=9,
+        color="dimgray",
+    )
+
     fig.savefig(out_path, **kwargs)
+
 
 
 def _format_date_axis(ax: plt.Axes, *, major_month_interval: int | None = None, fmt: str | None = None) -> None:

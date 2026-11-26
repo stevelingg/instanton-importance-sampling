@@ -1,5 +1,40 @@
 {
-  "built_at_utc": "2026-03-13T10:55:25+00:00",
+  "built_at_utc": "2026-11-26T15:48:26+00:00",
+  "scores": {
+    "n": 1852,
+    "mean_log_score": 0.22616827781785753,
+    "mean_brier": 0.0722835293103332
+  },
+  "scores_by_query": [
+    {
+      "Tdays": 20,
+      "delta": 0.2,
+      "n": 463,
+      "mean_log_score": 0.16943353023307686,
+      "mean_brier": 0.05615162272477156
+    },
+    {
+      "Tdays": 20,
+      "delta": 0.3,
+      "n": 463,
+      "mean_log_score": 0.09436522793962687,
+      "mean_brier": 0.02682338453520577
+    },
+    {
+      "Tdays": 60,
+      "delta": 0.2,
+      "n": 463,
+      "mean_log_score": 0.35527252946105303,
+      "mean_brier": 0.11457698476226368
+    },
+    {
+      "Tdays": 60,
+      "delta": 0.3,
+      "n": 463,
+      "mean_log_score": 0.2856018236376732,
+      "mean_brier": 0.09158212521909183
+    }
+  ],
   "scores_full": {
     "n": 1852,
     "mean_log_score": 0.22616827781785753,
@@ -219,28 +254,28 @@
       "min_z": 1.0
     },
     "outputs": {
-      "ordering_full_csv": "ordering_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-      "ordering_prehit_csv": "ordering_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv"
+      "ordering_full_csv": "ordering_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+      "ordering_prehit_csv": "ordering_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv"
     }
   },
   "outputs": {
-    "eval_joined_csv": "eval_joined_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "scores_full_by_group_csv": "scores_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "scores_prehit_by_group_csv": "scores_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "baseline_full_by_group_csv": "baseline_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "baseline_prehit_by_group_csv": "baseline_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "score_comparison_full_by_group_csv": "score_comparison_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "score_comparison_prehit_by_group_csv": "score_comparison_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "reliability_full_csv": "reliability_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "reliability_prehit_csv": "reliability_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "calibration_full_csv": "calibration_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "calibration_prehit_csv": "calibration_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "is_diagnostics_full_csv": "is_diagnostics_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "is_diagnostics_prehit_csv": "is_diagnostics_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "bootstrap_scores_full_overall_csv": "bootstrap_scores_full_overall_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "bootstrap_scores_full_by_group_csv": "bootstrap_scores_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "bootstrap_scores_prehit_overall_csv": "bootstrap_scores_prehit_overall_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
-    "bootstrap_scores_prehit_by_group_csv": "bootstrap_scores_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20260313T105511Z.csv",
+    "eval_joined_csv": "eval_joined_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "scores_full_by_group_csv": "scores_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "scores_prehit_by_group_csv": "scores_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "baseline_full_by_group_csv": "baseline_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "baseline_prehit_by_group_csv": "baseline_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "score_comparison_full_by_group_csv": "score_comparison_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "score_comparison_prehit_by_group_csv": "score_comparison_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "reliability_full_csv": "reliability_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "reliability_prehit_csv": "reliabilityprehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "calibration_full_csv": "calibration_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "calibration_prehit_csv": "calibration_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "is_diagnostics_full_csv": "is_diagnostics_full_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "is_diagnostics_prehit_csv": "is_diagnostics_prehit_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "bootstrap_scores_full_overall_csv": "bootstrap_scores_full_overall_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "bootstrap_scores_full_by_group_csv": "bootstrap_scores_full_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "bootstrap_scores_prehit_overall_csv": "bootstrap_scores_prehit_overall_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
+    "bootstrap_scores_prehit_by_group_csv": "bootstrap_scores_prehit_by_group_forecasts_2007-01-01_to_2008-10-31_20260313T015226Z_20261126T154812Z.csv",
     "plots": {
       "files": [
         "reliability_all_groups.png"
@@ -263,7 +298,7 @@
   },
   "naive_mc_checks": null,
   "cli_args": {
-    "run_dir": null,
+    "run_dir": "outputs/runs/run_2007-01-01_to_2008-10-31_20260313T015226Z",
     "forecasts_csv": null,
     "forecasts_dir": "outputs/forecasts",
     "forecasts_pattern": "*forecasts_*.csv",
